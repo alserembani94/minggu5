@@ -30,6 +30,24 @@
       <!-- Main content -->
       <h1>Books</h1>
     </main>
+    <script>
+      // 1. Cari navigation
+      const navMain = document.getElementById('nav-main');
+
+      // 2. Cari URL sekarang
+      const currentUrl = window.location.pathname;
+
+      // 3. Tambahkan class btn-primary pada navigation sekarang
+      if (currentUrl.includes('dashboard')) {
+        navMain.children[0].classList.add('btn-primary');
+      } else if (currentUrl.includes('books')) {
+        navMain.children[1].classList.add('btn-primary');
+      } else if (currentUrl.includes('orders')) {
+        navMain.children[2].classList.add('btn-primary');
+      } else if (currentUrl.includes('logistics')) {
+        navMain.children[3].classList.add('btn-primary');
+      }
+    </script>
     <!-- BUAT ATAS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
